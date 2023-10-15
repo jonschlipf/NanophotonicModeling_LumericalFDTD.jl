@@ -1,0 +1,10 @@
+name = "NanophotonicModeling_LumericalFDTD"
+uuid = "3f76c8bd-bca0-4c08-8694-9effb1667cca"
+authors = ["Jón Schlipf <jschlipf@gmx.com>"]
+version = "0.1.0"
+
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+NanophotonicModeling = "bd299c18-f30a-4db4-b1e7-108275c5f2ce"
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
