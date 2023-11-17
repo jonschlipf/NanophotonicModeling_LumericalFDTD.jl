@@ -28,6 +28,7 @@ module NanophotonicModeling_LumericalFDTD
                                :λmin=>500,
                               :λmax=>1500,
                              :fpoints=>1001,
+                             :plane_wave_type=>"Bloch/periodic",
                              :getfield=>false,
                              :get_intermediate=>true,
                              :material_loading=>Dict{String,Array{<:Real,1}}())
@@ -133,6 +134,7 @@ module NanophotonicModeling_LumericalFDTD
                       x_span=1.1*mdl.xy_size[1]*1e-9,
                       y_span=1.1*mdl.xy_size[2]*1e-9,
                       direction="Backward",
+                      plane_wave_type=hyperparameters[:plane_wave_type],
                       override_global_source_settings=false)
         fdtd.setglobalsource("wavelength start",hyperparameters[:λmin]*1e-9)
         fdtd.setglobalsource("wavelength stop",hyperparameters[:λmax]*1e-9)
