@@ -29,7 +29,7 @@ module NanophotonicModeling_LumericalFDTD
                               :λmax=>1500,
                              :fpoints=>1001,
                              :getfield=>false,
-                             :get_intermediatd=>true,
+                             :get_intermediate=>true,
                              :material_loading=>Dict{String,Array{<:Real,1}}())
     include("Running.jl")
     include("Evaluating.jl")
