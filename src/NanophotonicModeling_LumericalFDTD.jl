@@ -59,7 +59,9 @@ module NanophotonicModeling_LumericalFDTD
                      x_span=xy_span[1]*1e-9,
                      y_span=xy_span[2]*1e-9,
                      z_span=l.thickness*1e-9,
-                    name=nm)
+                    name=nm,
+                    override_mesh_order_from_material_database=1,
+                   mesh_order=2000)
         for i in eachindex(l.inclusions)
             add_block(fdtd,l.inclusions[i].geometry,l.inclusions[i].material,zpos-l.thickness/2,l.thickness,material_defs,index,i)
         end
